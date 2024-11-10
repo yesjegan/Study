@@ -29,9 +29,19 @@ The document is hosted on https://github.com/mortennobel/cpp-cheatsheet. Any com
 ## Literals
 
 ```cpp
-255, 0377, 0xff             // Integers (decimal, octal, hex)
+255, 0377, 0xff, 0b10110    // Integers (decimal no prefix, octal represented by 0, hex ( X or x), Binary (b or B))
 2147483647L, 0x7fffffffl    // Long (32-bit) integers
-123.0, 1.23e2               // double (real) numbers
+2147483647U, 2147483647u    // Usigned int (U or u)
+2147483647LL , 2147483647ll // Long long int (ll or LL)
+123.0, 1.23e2 , 3.14f       // double (real) numbers,float
+'A', u8'A'                  // char
+L'A',u'A', U'A'              //wchart , char16_t, char32_t
+"string", u8"string"        //const char* , const char8_t*
+L"string",u"string", U"string"//const wchart* , const char16_t*, const char32_t*
+
+"string"s, u8"string"s        //std::string  , std::u8string
+L"string"s,u"string"s, U"string"s//std::wstring , std::u16string, std::u32string
+R"("Hello \ world")"s;      // Raw std::string from const char*
 'a', '\141', '\x61'         // Character (literal, octal, hex)
 '\n', '\\', '\'', '\"'      // Newline, backslash, single quote, double quote
 "string\n"                  // Array of characters ending with newline and \0
